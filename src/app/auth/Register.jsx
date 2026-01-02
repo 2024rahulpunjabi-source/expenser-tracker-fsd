@@ -1,5 +1,5 @@
 import {useForm } from "react-hook-form"
-import { CustomInput } from "../../components/CustomInput"
+import { CustomInput } from "../../components/Custominput";
 import { CustomButton } from "../../components/CustomButton"
 import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";

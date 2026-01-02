@@ -1,8 +1,8 @@
-import { useForm } from "react-hook-form"
-import { CustomButton } from "../../components/CustomButton";
-import { CustomInput } from "../../components/CustomInput";
-import z from "zod";
+import {useForm } from "react-hook-form"
+import { CustomInput } from "../../components/Custominput";
+import { CustomButton } from "../../components/CustomButton"
 import { zodResolver } from "@hookform/resolvers/zod";
+import z from "zod";
 
 export const Login = () => {
 
@@ -30,7 +30,7 @@ export const Login = () => {
                                 <div className="welcome-content">
                                     <div className="welcome-title">
                                         <div className="mini-logo">
-                                            <img src="" alt="" width="50"/>
+                                            <img src="null" alt="" width="50"/>
                                         </div>
                                         <h3>Welcome to Expense Tracker</h3>
                                     </div>
@@ -62,16 +62,10 @@ export const Login = () => {
                                         <div className="row">
                                             <CustomButton label={"Sign in"} />
                                         </div>
-                                        <div className="mt-3 d-grid gap-2">
-                                            <button type="submit"
-                                                    className="btn btn-primary me-8 text-white">Sign In
-                                            </button>
-                                        </div>
+                                      
                                     </form>
                                     <p className="mt-3 mb-0 undefined">Don't have an account?
-                                        <a className="text-primary" href="">
-                                            Sign up
-                                        </a>
+                                      
                                     </p>
                                 </div>
                             </div>
