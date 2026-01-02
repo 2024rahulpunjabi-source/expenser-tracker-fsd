@@ -1,4 +1,25 @@
+import { useForm } from "react-hook-form"
+import { CustomButton } from "../../components/CustomButton";
+import { CustomInput } from "../../components/CustomInput";
+import z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
 export const Login = () => {
+
+    const LoginForm = z.object({
+            email: z.email(),
+            password: z.string().nonempty("passowrd is Required").min(8, "Password should atleast have 8 char"),
+        })
+        const {register, handleSubmit, formState: {errors}} = useForm({
+            resolver:zodResolver(LoginForm)
+        });
+    
+            console.log(errors);
+
+    const onSubmit = (data) => {
+        console.log(data);
+        
+    }
     return (
         <div className="authincation">
             <div className="container">
@@ -23,16 +44,23 @@ export const Login = () => {
                             <div className="col-lg-6">
                                 <div className="auth-form shadow">
                                     <h4>Sign In</h4>
-                                    <form action="">
+                                    <form onSubmit={handleSubmit(onSubmit)}>
                                         <div className="row">
-                                            <div className="col-12 mb-3">
-                                                <label className="form-label">Email</label>
-                                                <input name="Email" type="text" className="form-control"/>
-                                            </div>
-                                            <div className="col-12 mb-3">
-                                                <label className="form-label">Password</label>
-                                                <input name="Password" type="text" className="form-control"/>
-                                            </div>
+                                           <CustomInput type={"text"}
+                                                        label={"Email"}
+                                                        name={"email"}
+                                                        register={register}
+                                                        error= {errors.email}
+                                            />
+                                            <CustomInput type={"password"}
+                                                         label={"Password"}
+                                                         name={"password"}
+                                                         register={register}
+                                                        error= {errors.password}
+                                            />
+                                        </div>
+                                        <div className="row">
+                                            <CustomButton label={"Sign in"} />
                                         </div>
                                         <div className="mt-3 d-grid gap-2">
                                             <button type="submit"
