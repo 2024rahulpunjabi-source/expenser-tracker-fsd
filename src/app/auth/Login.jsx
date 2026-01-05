@@ -1,13 +1,12 @@
 import {useForm } from "react-hook-form"
 import { CustomInput } from "../../components/Custominput";
-import { CustomButton } from "../../components/CustomButton"
+import CustomButton from "../../components/CustomButton";
 import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";
 import {api} from "../../config/axios"
-import { setCookie } from "../../utils/utils";
+import { errorHandler,setCookie } from "../../utils/utils";
 import { LONG_LIVE_TOKEN } from "../../constant/constants";
 import { useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
 
 export const Login = () => {
 
@@ -43,9 +42,7 @@ export const Login = () => {
             }
         }catch(err){
             //handle error
-            if(err.response && err.response.status == 400) {
-                toast.error(err.response.data.data)
-            }
+           errorHandler(err)
         }
         
     }
