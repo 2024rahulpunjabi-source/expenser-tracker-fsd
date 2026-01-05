@@ -3,6 +3,11 @@ import { CustomInput } from "../../components/Custominput";
 import { CustomButton } from "../../components/CustomButton"
 import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";
+import {api} from "../../config/axios"
+import { setCookie } from "../../utils/utils";
+import { LONG_LIVE_TOKEN } from "../../constant/constants";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 const Register = () => {
 
     const RegisterForm = z.object({
@@ -12,14 +17,40 @@ const Register = () => {
         phone: z.string().nonempty("Phone Number is required").length(10, "Phone Number should have 10 digits"),
         password: z.string().nonempty("password should not be empty").min(8, "password should have atleast 8 characters"),
     })
-    
-
+    const navigate = useNavigate();
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver:zodResolver(RegisterForm)
     })
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
         console.log(data)
+        const postObj = {
+            first_name: data.firstName,
+            last_name: data.lastName,
+            phone_number: data.phone,
+            email: data.email,
+            password: data.password        
+        }
+        console.log(postObj)
+        try {
+            const response = await api({
+                method: "POST",
+                data: postObj,
+                url: "/register"
+            })
+            if(response.status === 200) {
+                console.log(response.data.data.token)
+                //store token cookie
+                setCookie(LONG_LIVE_TOKEN,response.data.data.token, 1)
+                //navigate dashboard
+                navigate("/")
+            }
+        }catch(err){
+            //handle error
+            if(err.response && err.response.status == 400) {
+                toast.error(err.response.data.data)
+            }
+        }
     };
 
     return (
