@@ -1,25 +1,70 @@
-/**
- * Automated API Smoke Test Suite
- * Tests Auth, CRUD, Analytics, Error Handling, and RBAC
- */
+import { spawn } from 'child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const BASE_URL = process.env.API_URL || 'http://localhost:5000/api';
 
-const runTests = async () => {
-  console.log('🧪 Starting API Smoke Tests against:', BASE_URL);
-  let passed = 0;
-  let failed = 0;
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-  const assert = (condition, testName) => {
-    if (condition) {
-      console.log(`  ✅ PASS: ${testName}`);
-      passed++;
-    } else {
-      console.error(`  ❌ FAIL: ${testName}`);
-      failed++;
-    }
-  };
+// Probe if server is already running
+const checkServerRunning = async () => {
+  try {
+    const res = await fetch(`${BASE_URL}/health`, { signal: AbortSignal.timeout(1500) });
+    return res.ok;
+  } catch {
+    return false;
+  }
+};
+
+const runSmokeTests = async () => {
+  console.log('🧪 Starting API Smoke Tests against:', BASE_URL);
+  let serverProcess = null;
 
   try {
+    const alreadyRunning = await checkServerRunning();
+
+    if (!alreadyRunning) {
+      console.log('ℹ️  Backend server is not running. Automatically starting temporary server for testing...');
+      const serverEntry = path.join(__dirname, '..', 'src', 'server.js');
+      serverProcess = spawn(process.execPath, [serverEntry], {
+        cwd: path.join(__dirname, '..'),
+        stdio: 'inherit',
+        env: { ...process.env, NODE_ENV: 'development', PORT: '5000' },
+      });
+
+      // Poll until server is ready (max 15 seconds)
+      let ready = false;
+      const startTime = Date.now();
+      while (Date.now() - startTime < 15000) {
+        await sleep(1000);
+        ready = await checkServerRunning();
+        if (ready) break;
+      }
+
+      if (!ready) {
+        throw new Error('Server failed to start within 15 seconds.');
+      }
+      console.log('⚡ Test server is up and responsive! Running test suite...\n');
+    } else {
+      console.log('⚡ Connected to active running server.\n');
+    }
+
+    let passed = 0;
+    let failed = 0;
+
+    const assert = (condition, testName) => {
+      if (condition) {
+        console.log(`  ✅ PASS: ${testName}`);
+        passed++;
+      } else {
+        console.error(`  ❌ FAIL: ${testName}`);
+        failed++;
+      }
+    };
+
     // 1. Health Check
     const healthRes = await fetch(`${BASE_URL}/health`);
     const healthJson = await healthRes.json();
@@ -119,8 +164,6 @@ const runTests = async () => {
         headers: { Authorization: `Bearer ${adminToken}` },
       });
       assert(adminStatsRes.status === 200, 'GET /admin/stats succeeds for Admin with 200 OK');
-    } else {
-      console.log('  ⚠️ Skipping admin verification (seed user not yet loaded)');
     }
 
     // 10. CRUD: Delete test expense
@@ -131,12 +174,20 @@ const runTests = async () => {
     assert(delRes.status === 200, 'DELETE /expenses/:id removes transaction with 200 OK');
 
     console.log(`\n🏁 Test Run Summary: ${passed} Passed, ${failed} Failed`);
+
+    if (serverProcess) {
+      serverProcess.kill('SIGTERM');
+    }
+
     if (failed > 0) process.exit(1);
     else process.exit(0);
   } catch (err) {
     console.error('Smoke test crashed:', err.message);
+    if (serverProcess) {
+      serverProcess.kill('SIGTERM');
+    }
     process.exit(1);
   }
 };
 
-runTests();
+runSmokeTests();

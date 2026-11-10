@@ -11,9 +11,11 @@ import { Message } from '../models/Message.js';
 import { DEFAULT_CATEGORIES } from '../controllers/categoryController.js';
 import { logger } from './logger.js';
 
-export const seedDatabase = async () => {
+export const seedDatabase = async (autoClose = false) => {
   try {
-    await connectDB();
+    if (mongoose.connection.readyState === 0) {
+      await connectDB();
+    }
     logger.info('Purging existing data for fresh seed...');
 
     await Promise.all([
@@ -211,7 +213,7 @@ export const seedDatabase = async () => {
     logger.info('   User:  user@example.com / User@123');
     logger.info('==========================================');
 
-    if (process.argv[1].endsWith('seedData.js')) {
+    if (autoClose) {
       await closeDB();
       process.exit(0);
     }
@@ -223,5 +225,5 @@ export const seedDatabase = async () => {
 
 // Run directly if invoked via CLI
 if (process.argv[1].endsWith('seedData.js')) {
-  seedDatabase();
+  seedDatabase(true);
 }
