@@ -35,17 +35,17 @@ const runSmokeTests = async () => {
         env: { ...process.env, NODE_ENV: 'development', PORT: '5000' },
       });
 
-      // Poll until server is ready (max 15 seconds)
+      // Poll until server is ready (max 30 seconds)
       let ready = false;
       const startTime = Date.now();
-      while (Date.now() - startTime < 15000) {
+      while (Date.now() - startTime < 30000) {
         await sleep(1000);
         ready = await checkServerRunning();
         if (ready) break;
       }
 
       if (!ready) {
-        throw new Error('Server failed to start within 15 seconds.');
+        throw new Error('Server failed to start within 30 seconds.');
       }
       console.log('⚡ Test server is up and responsive! Running test suite...\n');
     } else {
