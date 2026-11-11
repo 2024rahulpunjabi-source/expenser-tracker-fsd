@@ -7,7 +7,7 @@ import { useSocket } from './SocketContext';
 const ExpenseContext = createContext();
 
 export const ExpenseProvider = ({ children }) => {
-  const { isAuthenticated } = useAuth();
+  const { user, isAuthenticated } = useAuth();
   const { socket } = useSocket();
 
   const [expenses, setExpenses] = useState([]);
