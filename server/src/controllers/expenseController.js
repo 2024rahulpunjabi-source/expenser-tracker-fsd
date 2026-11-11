@@ -79,7 +79,9 @@ export const createExpense = async (req, res, next) => {
     // Socket.io real-time broadcast
     const io = getIO();
     if (io) {
-      io.to(`user:${req.user._id}`).emit('expense:added', expense);
+      // Broadcast to all connected sessions (both user tabs and admin dashboards)
+      io.emit('expense:added', expense);
+      io.emit('admin:stats_updated');
       io.emit('activity:feed', {
         type: 'transaction_added',
         userName: req.user.name,
@@ -125,7 +127,8 @@ export const getExpenses = async (req, res, next) => {
       sortOrder = 'desc',
     } = req.query;
 
-    const query = { user: req.user._id };
+    // Admins have global visibility over all transactions; standard users see only their own
+    const query = req.user.role === 'admin' ? {} : { user: req.user._id };
 
     // Search by title or notes (case-insensitive regex)
     if (search) {
@@ -259,7 +262,8 @@ export const updateExpense = async (req, res, next) => {
 
     const io = getIO();
     if (io) {
-      io.to(`user:${req.user._id}`).emit('expense:updated', updatedExpense);
+      io.emit('expense:updated', updatedExpense);
+      io.emit('admin:stats_updated');
     }
 
     if (updatedExpense.type === 'EXPENSE') {
@@ -295,7 +299,8 @@ export const deleteExpense = async (req, res, next) => {
 
     const io = getIO();
     if (io) {
-      io.to(`user:${req.user._id}`).emit('expense:deleted', { id: req.params.id });
+      io.emit('expense:deleted', { id: req.params.id });
+      io.emit('admin:stats_updated');
     }
 
     res.status(200).json({
@@ -312,11 +317,14 @@ export const deleteExpense = async (req, res, next) => {
 // @access  Private
 export const getExpenseStats = async (req, res, next) => {
   try {
-    const userId = new mongoose.Types.ObjectId(req.user._id);
+    const matchUser =
+      req.user.role === 'admin'
+        ? {}
+        : { user: new mongoose.Types.ObjectId(req.user._id) };
 
     // 1. Overall Totals
     const totals = await Expense.aggregate([
-      { $match: { user: userId } },
+      { $match: matchUser },
       {
         $group: {
           _id: '$type',
@@ -341,7 +349,7 @@ export const getExpenseStats = async (req, res, next) => {
 
     // 2. Spending by Category (Expenses only)
     const categoryBreakdown = await Expense.aggregate([
-      { $match: { user: userId, type: 'EXPENSE' } },
+      { $match: { ...matchUser, type: 'EXPENSE' } },
       {
         $group: {
           _id: '$category',
@@ -368,7 +376,7 @@ export const getExpenseStats = async (req, res, next) => {
     const monthlyTrends = await Expense.aggregate([
       {
         $match: {
-          user: userId,
+          ...matchUser,
           date: { $gte: sixMonthsAgo },
         },
       },
@@ -411,7 +419,7 @@ export const getExpenseStats = async (req, res, next) => {
 
     // 4. Payment method distribution
     const paymentMethods = await Expense.aggregate([
-      { $match: { user: userId } },
+      { $match: matchUser },
       {
         $group: {
           _id: '$paymentMethod',

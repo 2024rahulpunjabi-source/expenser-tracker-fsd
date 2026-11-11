@@ -12,9 +12,11 @@ import {
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { adminApi } from '../services/api';
+import { useSocket } from '../context/SocketContext';
 import DeleteConfirmModal from '../components/DeleteConfirmModal';
 
 export default function AdminPage() {
+  const { socket } = useSocket();
   const [users, setUsers] = useState([]);
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -40,6 +42,22 @@ export default function AdminPage() {
   useEffect(() => {
     loadAdminData();
   }, []);
+
+  // Listen to live WebSocket events to automatically update Admin metrics
+  useEffect(() => {
+    if (!socket) return;
+    const handleLiveAdminUpdate = () => {
+      loadAdminData();
+    };
+    socket.on('admin:stats_updated', handleLiveAdminUpdate);
+    socket.on('expense:added', handleLiveAdminUpdate);
+    socket.on('expense:deleted', handleLiveAdminUpdate);
+    return () => {
+      socket.off('admin:stats_updated', handleLiveAdminUpdate);
+      socket.off('expense:added', handleLiveAdminUpdate);
+      socket.off('expense:deleted', handleLiveAdminUpdate);
+    };
+  }, [socket]);
 
   const handleToggleStatus = async (id) => {
     try {

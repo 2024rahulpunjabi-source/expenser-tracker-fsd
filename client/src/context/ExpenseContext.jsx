@@ -103,15 +103,35 @@ export const ExpenseProvider = ({ children }) => {
     if (!socket) return;
 
     const handleExpenseAdded = (newExpense) => {
-      setExpenses((prev) => [newExpense, ...prev.filter((e) => e._id !== newExpense._id)]);
-      fetchStats();
-      fetchBudgets();
+      const isOwner =
+        newExpense.user?._id === user?._id ||
+        newExpense.user === user?._id;
+      const isAdmin = user?.role === 'admin';
+
+      if (isOwner || isAdmin) {
+        setExpenses((prev) => [newExpense, ...prev.filter((e) => e._id !== newExpense._id)]);
+        fetchStats();
+        fetchBudgets();
+        if (!isOwner && isAdmin) {
+          toast(
+            `⚡ Live Activity: ${newExpense.user?.name || 'User'} added "${newExpense.title}" (₹${newExpense.amount})`,
+            { icon: '🔔' }
+          );
+        }
+      }
     };
 
     const handleExpenseUpdated = (updated) => {
-      setExpenses((prev) => prev.map((e) => (e._id === updated._id ? updated : e)));
-      fetchStats();
-      fetchBudgets();
+      const isOwner =
+        updated.user?._id === user?._id ||
+        updated.user === user?._id;
+      const isAdmin = user?.role === 'admin';
+
+      if (isOwner || isAdmin) {
+        setExpenses((prev) => prev.map((e) => (e._id === updated._id ? updated : e)));
+        fetchStats();
+        fetchBudgets();
+      }
     };
 
     const handleExpenseDeleted = ({ id }) => {
@@ -129,7 +149,7 @@ export const ExpenseProvider = ({ children }) => {
       socket.off('expense:updated', handleExpenseUpdated);
       socket.off('expense:deleted', handleExpenseDeleted);
     };
-  }, [socket, fetchStats, fetchBudgets]);
+  }, [socket, user, fetchStats, fetchBudgets]);
 
   // CRUD Actions
   const addExpense = async (data) => {
