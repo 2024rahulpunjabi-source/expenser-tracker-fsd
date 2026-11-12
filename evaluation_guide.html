@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ExpenseTracker PRO - Mini Project Evaluation & Viva Guide</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+    .header {
+      border-bottom: 2px solid #4f46e5;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .header-left h1 {
+      font-size: 20px;
+      color: #0f172a;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .header-left .subtitle {
+      font-size: 13px;
+      color: #4f46e5;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .header-left .meta {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+    .badge-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #eef2ff;
+      color: #4338ca;
+      border: 1px solid #c7d2fe;
+    }
+    .badge.green {
+      background: #ecfdf5;
+      color: #065f46;
+      border-color: #a7f3d0;
+    }
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 5px;
+      margin-top: 14px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .setup-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid #4f46e5;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+    .setup-box h3 {
+      font-size: 13px;
+      color: #1e1b4b;
+      margin-bottom: 6px;
+    }
+    .setup-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .setup-box li {
+      font-size: 12px;
+      color: #334155;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .code-pill {
+      font-family: Consolas, 'Courier New', monospace;
+      background: #0f172a;
+      color: #38bdf8;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 11px;
+    }
+    .topic-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      page-break-inside: avoid;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .topic-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      border-bottom: 1px dashed #e2e8f0;
+      padding-bottom: 4px;
+    }
+    .topic-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e293b;
+    }
+    .topic-num {
+      background: #4f46e5;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-right: 6px;
+    }
+    .sub-block {
+      margin-top: 5px;
+      font-size: 11.5px;
+    }
+    .sub-label {
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      display: inline-block;
+      margin-bottom: 2px;
+    }
+    .label-show { color: #0284c7; }
+    .label-code { color: #7c3aed; }
+    .label-say { color: #059669; }
+    
+    .show-list {
+      list-style-type: disc;
+      padding-left: 18px;
+      color: #334155;
+      margin-bottom: 4px;
+    }
+    .code-list {
+      list-style: none;
+      padding-left: 0;
+      color: #475569;
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+    .code-list li {
+      margin-bottom: 2px;
+    }
+    .say-quote {
+      background: #f0fdf4;
+      border-left: 3px solid #10b981;
+      padding: 5px 8px;
+      border-radius: 0 4px 4px 0;
+      color: #064e3b;
+      font-style: italic;
+      font-size: 11px;
+      margin-top: 3px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 11.5px;
+      page-break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 11px;
+    }
+    td.q {
+      font-weight: 600;
+      color: #1e293b;
+      width: 32%;
+      background: #fafafa;
+    }
+    td.a {
+      color: #334155;
+    }
+    .footer {
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px solid #cbd5e1;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-left">
+      <h1>Mini Project Evaluation & Viva Master Guide</h1>
+      <div class="subtitle">ExpenseTracker PRO &bull; Full-Stack Web Development (FSD)</div>
+      <div class="meta">Complete 9-Point Demonstration Script, Architecture Walkthrough & Viva Q&amp;A</div>
+      <div class="badge-stack">
+        <span class="badge">MongoDB</span>
+        <span class="badge">Express.js</span>
+        <span class="badge">React 19</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">Tailwind CSS</span>
+        <span class="badge">Socket.IO (WebSockets)</span>
+        <span class="badge">Docker Multi-Stage</span>
+        <span class="badge">GitHub Actions CI/CD</span>
+        <span class="badge green">100% Checklist Compliant</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">⚡ 1. Pre-Demo Setup Checklist (Before Evaluator Arrives)</div>
+  <div class="setup-box">
+    <h3>Prepare Your Environment in Under 2 Minutes:</h3>
+    <ul>
+      <li><span>1.</span> <span>In terminal at <span class="code-pill">C:\rahul\expense-tracker-fsd</span>, run: <span class="code-pill">npm run dev</span> (starts backend on :5000 & frontend on :5173).</span></li>
+      <li><span>2.</span> <span>Open 3 browser tabs side-by-side:</span></li>
+      <li style="padding-left: 18px;"><span>&bull;</span> <span><strong>Tab 1 (Main App)</strong>: <span class="code-pill">http://localhost:5173</span> (logged in as Admin)</span></li>
+      <li style="padding-left: 18px;"><span>&bull;</span> <span><strong>Tab 2 (Incognito / 2nd Window)</strong>: <span class="code-pill">http://localhost:5173</span> (logged in as User for live Socket.IO sync!)</span></li>
+      <li style="padding-left: 18px;"><span>&bull;</span> <span><strong>Tab 3 (Swagger API Docs)</strong>: <span class="code-pill">http://localhost:5000/api-docs</span> (OpenAPI 3.0 interactive docs)</span></li>
+      <li><span>3.</span> <span>Have <strong>VS Code</strong> open at <span class="code-pill">C:\rahul\expense-tracker-fsd</span> ready to jump to code files.</span></li>
+    </ul>
+  </div>
+
+  <div class="section-title">🎯 2. Step-by-Step Viva Demonstration Script (All 9 Checklist Points)</div>
+
+  <!-- TOPIC 1 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-title"><span class="topic-num">1</span> Frontend with Tailwind CSS</div>
+      <span class="badge">UI & Responsiveness</span>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-show">🖥️ What to Show on Screen:</span>
+      <ul class="show-list">
+        <li>Open <code>http://localhost:5173</code>. Show the modern fintech UI, rounded cards, stat counters, and glassmorphism navbar.</li>
+        <li>Click the <strong>Sun / Moon icon</strong> to demonstrate instantaneous Dark &amp; Light theme switching.</li>
+        <li>Press <code>F12</code> and toggle <strong>Mobile View</strong> in Chrome: showcase responsive hamburger menu and adaptive grid cards.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-code">💻 Code to Point Out in VS Code:</span>
+      <ul class="code-list">
+        <li>&bull; <code>client/tailwind.config.js</code> &mdash; custom palette (<code>brand</code>), <code>darkMode: 'class'</code>, and font configurations.</li>
+        <li>&bull; <code>client/src/components/Navbar.jsx</code> &mdash; utility classes like <code>backdrop-blur-md</code>, <code>dark:bg-slate-900</code>, <code>transition-colors</code>.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-say">🗣️ What to Say (Viva Script):</span>
+      <div class="say-quote">
+        "I implemented a 100% utility-first responsive UI using Tailwind CSS without writing monolithic custom CSS files. It supports mobile, tablet, and desktop layouts with a dark/light mode toggle synchronized with localStorage and HTML class attributes."
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 2 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-title"><span class="topic-num">2</span> React & State Management</div>
+      <span class="badge">Hooks & Context API</span>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-show">🖥️ What to Show on Screen:</span>
+      <ul class="show-list">
+        <li>Go to <strong>Transactions</strong> page: type in the search bar &mdash; show instant debounced filtering without lag.</li>
+        <li>Demonstrate that authentication, theme, expense data, and socket alerts persist seamlessly across routes without prop drilling.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-code">💻 Code to Point Out in VS Code:</span>
+      <ul class="code-list">
+        <li>&bull; <code>client/src/context/AuthContext.jsx</code> &amp; <code>ExpenseContext.jsx</code> &mdash; clean React Context API state providers.</li>
+        <li>&bull; <code>client/src/hooks/useDebounce.js</code> &amp; <code>useLocalStorage.js</code> &mdash; custom reusable React hooks.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-say">🗣️ What to Say (Viva Script):</span>
+      <div class="say-quote">
+        "Rather than adding third-party state overhead like Redux, I utilized React's native Context API with 4 domain-separated contexts: AuthContext, ExpenseContext, ThemeContext, and SocketContext. I also developed custom hooks like useDebounce for search rate-limiting and useLocalStorage for state persistence."
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 3 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-title"><span class="topic-num">3</span> Backend REST API &amp; Documentation</div>
+      <span class="badge">Node.js & Express</span>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-show">🖥️ What to Show on Screen:</span>
+      <ul class="show-list">
+        <li>Open Tab 3 at <code>http://localhost:5000/api-docs</code>. Show the interactive <strong>Swagger UI</strong> documenting all endpoints.</li>
+        <li>Expand <code>GET /api/expenses</code>, click <strong>"Try it out"</strong> &rarr; <strong>"Execute"</strong> to show a live 200 OK response with pagination metadata.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-code">💻 Code to Point Out in VS Code:</span>
+      <ul class="code-list">
+        <li>&bull; <code>server/src/routes/expenseRoutes.js</code> &mdash; strict RESTful URL routes and HTTP verbs (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>).</li>
+        <li>&bull; <code>server/src/config/swagger.js</code> &mdash; OpenAPI 3.0 specification covering schemas, request parameters, and response codes.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-say">🗣️ What to Say (Viva Script):</span>
+      <div class="say-quote">
+        "The backend follows strict REST principles using Express.js. It implements semantic HTTP methods, standard HTTP status codes (201 Created, 200 OK, 400 Bad Request, 403 Forbidden, 404 Not Found), modular controller routing, and full automated OpenAPI 3.0 Swagger documentation."
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 4 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-title"><span class="topic-num">4</span> MongoDB &amp; Mongoose Modeling</div>
+      <span class="badge">NoSQL & Aggregation</span>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-show">🖥️ What to Show on Screen:</span>
+      <ul class="show-list">
+        <li>Show Dashboard charts: <strong>Category Breakdown Pie Chart</strong> and <strong>Monthly Cash Flow Trends</strong> computed directly via database aggregations.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-code">💻 Code to Point Out in VS Code:</span>
+      <ul class="code-list">
+        <li>&bull; <code>server/src/models/Expense.js</code> &mdash; Mongoose schema, references (<code>ref: 'User'</code>), and compound indexes (<code>{ user: 1, date: -1 }</code>).</li>
+        <li>&bull; <code>server/src/controllers/expenseController.js</code> (lines 280&ndash;370) &mdash; multi-stage aggregation pipeline (<code>$match</code>, <code>$group</code>, <code>$sort</code>).</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-say">🗣️ What to Say (Viva Script):</span>
+      <div class="say-quote">
+        "I designed normalized Mongoose schemas with compound indexes to optimize user and date-based query performance. Analytics are computed directly on the database engine using MongoDB aggregation pipelines rather than memory-heavy JavaScript loops."
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 5 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-title"><span class="topic-num">5</span> Data Validation &amp; Error Handling</div>
+      <span class="badge">Middleware & Security</span>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-show">🖥️ What to Show on Screen:</span>
+      <ul class="show-list">
+        <li>Click <strong>"Add Transaction"</strong> modal, leave Title blank and enter <code>-500</code> for Amount. Submit to demonstrate instant inline and toast error feedback.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-code">💻 Code to Point Out in VS Code:</span>
+      <ul class="code-list">
+        <li>&bull; <code>server/src/middleware/validationMiddleware.js</code> &mdash; <code>express-validator</code> rules checking string length, positive amounts, and ISO dates.</li>
+        <li>&bull; <code>server/src/middleware/errorMiddleware.js</code> &mdash; centralized error handler catching CastErrors, duplicate keys (code 11000), and invalid inputs.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-say">🗣️ What to Say (Viva Script):</span>
+      <div class="say-quote">
+        "Validation is enforced on both ends: client-side form guards, and strict server-side middleware validation using express-validator. A centralized Express error-handling middleware intercepts exceptions and standardizes JSON error responses."
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 6 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-title"><span class="topic-num">6</span> Authentication &amp; Authorization (RBAC)</div>
+      <span class="badge">JWT &amp; Roles</span>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-show">🖥️ What to Show on Screen:</span>
+      <ul class="show-list">
+        <li>Login as <strong>Demo User</strong> (<code>user@example.com</code> / <code>User@123</code>). Manually type <code>/admin</code> in URL bar &rarr; show <strong>403 Forbidden Screen</strong>.</li>
+        <li>Logout and login as <strong>Admin</strong> (<code>admin@example.com</code> / <code>Admin@123</code>). The <strong>Admin Panel</strong> appears in the navigation showing system analytics and user toggles.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-code">💻 Code to Point Out in VS Code:</span>
+      <ul class="code-list">
+        <li>&bull; <code>server/src/middleware/authMiddleware.js</code> &mdash; JWT verification (<code>jwt.verify</code>) attaching decoded user payload to request.</li>
+        <li>&bull; <code>server/src/middleware/roleMiddleware.js</code> &mdash; <code>authorize('admin')</code> middleware protecting privileged routes.</li>
+        <li>&bull; <code>server/src/models/User.js</code> &mdash; bcrypt salt-hashing (10 rounds) before persisting passwords.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-say">🗣️ What to Say (Viva Script):</span>
+      <div class="say-quote">
+        "Authentication uses stateless JSON Web Tokens (JWT) signed with HMAC-SHA256 and salted bcrypt password hashing. Role-Based Access Control (RBAC) restricts endpoints and views, distinguishing regular users from administrators with HTTP 403 authorization guards."
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 7 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-title"><span class="topic-num">7</span> Real-Time Features (Socket.IO)</div>
+      <span class="badge green">Real-Time WebSockets</span>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-show">🖥️ What to Show on Screen (The "Wow" Factor!):</span>
+      <ul class="show-list">
+        <li>Place <strong>Tab 1 (Admin)</strong> on left and <strong>Tab 2 (Incognito / User)</strong> on right side of screen.</li>
+        <li>On Tab 2, click <strong>"Add Transaction"</strong> and submit a ₹1,500 expense.</li>
+        <li><strong>Watch Tab 1</strong>: The transaction table and statistics update <strong>instantaneously in real-time without refreshing either browser tab!</strong></li>
+        <li>Open the <strong>Live Chat</strong> tab in both windows: send a message from Tab 1 and watch it appear live on Tab 2.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-code">💻 Code to Point Out in VS Code:</span>
+      <ul class="code-list">
+        <li>&bull; <code>server/src/sockets/socketHandler.js</code> &mdash; Socket.IO server initialization, active client tracking, and broadcasting.</li>
+        <li>&bull; <code>client/src/context/SocketContext.jsx</code> &mdash; client-side WebSocket listeners for <code>expense:added</code>, <code>admin:stats_updated</code>, and <code>chat:message</code>.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-say">🗣️ What to Say (Viva Script):</span>
+      <div class="say-quote">
+        "I incorporated Socket.IO to enable bi-directional, event-driven WebSocket communication. When any transaction or budget update occurs, the server broadcasts an event, allowing all active clients to synchronize state immediately without costly HTTP polling."
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 8 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-title"><span class="topic-num">8</span> Docker &amp; Containerization</div>
+      <span class="badge">Multi-Stage Docker</span>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-show">🖥️ What to Show on Screen:</span>
+      <ul class="show-list">
+        <li>Show root container configuration files in VS Code.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-code">💻 Code to Point Out in VS Code:</span>
+      <ul class="code-list">
+        <li>&bull; <code>docker-compose.yml</code> &mdash; 3 coordinated services: <code>mongo</code> (with volume persistence), <code>backend</code>, and <code>frontend</code>.</li>
+        <li>&bull; <code>client/Dockerfile</code> &mdash; <strong>Multi-Stage Build</strong>: Stage 1 builds the Vite bundle on Node Alpine; Stage 2 serves it via lightweight Nginx.</li>
+        <li>&bull; <code>server/Dockerfile</code> &mdash; production Node.js Alpine container with healthcheck.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-say">🗣️ What to Say (Viva Script):</span>
+      <div class="say-quote">
+        "The application is completely containerized. I implemented multi-stage Docker builds to keep image sizes minimal by separating the build-time Vite environment from the runtime Nginx server. docker-compose.yml coordinates the frontend, backend, and MongoDB with isolated networks and healthchecks."
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 9 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-title"><span class="topic-num">9</span> DevOps, CI/CD &amp; Testing</div>
+      <span class="badge">GitHub Actions &amp; Tests</span>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-show">🖥️ What to Show on Screen:</span>
+      <ul class="show-list">
+        <li>Open terminal and execute: <span class="code-pill">npm test</span> &mdash; watch the <strong>automated API smoke test suite</strong> run and pass 10/10 tests live!</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-code">💻 Code to Point Out in VS Code:</span>
+      <ul class="code-list">
+        <li>&bull; <code>.github/workflows/ci.yml</code> &mdash; automated pipeline that lints, builds client/server, and executes automated tests on pushes.</li>
+        <li>&bull; <code>render.yaml</code> &amp; <code>client/vercel.json</code> &mdash; Infrastructure-as-Code deployment manifests for production cloud hosting.</li>
+      </ul>
+    </div>
+    <div class="sub-block">
+      <span class="sub-label label-say">🗣️ What to Say (Viva Script):</span>
+      <div class="say-quote">
+        "For DevOps, I implemented automated continuous integration using GitHub Actions in .github/workflows/ci.yml. Every code change undergoes automated build verification and test execution. The repository also includes cloud deployment manifests for Vercel and Render."
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">🏆 3. Quick Reference: Most Frequent Viva Questions &amp; Model Answers</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 32%;">Viva Question</th>
+        <th>Ideal Technical Answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="q">Why choose Context API over Redux for state management?</td>
+        <td class="a">"For a project of this scale, Redux introduces significant boilerplate, extra actions, and bundle overhead. React's native Context API, partitioned into modular providers (Auth, Expenses, Theme, Socket), provides lightweight global state management with clean separation of concerns and zero external dependencies."</td>
+      </tr>
+      <tr>
+        <td class="q">How does JWT authentication work end-to-end?</td>
+        <td class="a">"Upon valid login credentials, the server signs a JSON payload containing the user's ID and role using HMAC-SHA256 and an environment secret. The client receives this token and attaches it to subsequent requests in the <code>Authorization: Bearer &lt;token&gt;</code> header. The server verifies this token using middleware before granting access."</td>
+      </tr>
+      <tr>
+        <td class="q">Why use compound indexing in MongoDB?</td>
+        <td class="a">"Our primary queries filter by the logged-in user and sort by transaction date (<code>{ user: 1, date: -1 }</code>). A compound index allows MongoDB to resolve both the filter and the sort order directly in B-tree memory without performing expensive collection-wide scans."</td>
+      </tr>
+      <tr>
+        <td class="q">Why use WebSockets instead of periodic HTTP polling?</td>
+        <td class="a">"HTTP polling creates continuous overhead with repeated TCP handshakes and header payloads even when no new data exists. WebSockets maintain a single persistent full-duplex connection, allowing the server to push events (new expenses, budget threshold alerts, chat messages) to the client with sub-millisecond latency."</td>
+      </tr>
+      <tr>
+        <td class="q">What is the advantage of a multi-stage Docker build?</td>
+        <td class="a">"A single-stage build would leave Node.js, npm cache, and source files inside the production container, resulting in images exceeding 800MB. Multi-stage builds compile the static assets in Stage 1, then copy only the compiled static bundle into a lightweight Nginx Alpine container in Stage 2, reducing the production image to under 25MB."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <div><strong>ExpenseTracker PRO</strong> &bull; Mini Project Evaluation Guide &bull; Ready for Viva &amp; Lab Demo</div>
+    <div>Page 1 / Complete Demonstration Document</div>
+  </div>
+
+</body>
+</html>

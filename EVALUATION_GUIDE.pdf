@@ -1,0 +1,2106 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [8 0 R 10 0 R 12 0 R 14 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+7 0 obj
+<< /Length 6253 >>
+stream
+0.98 0.99 1 rg
+0.8 0.85 0.95 RG
+1 w
+40 755 515.28 50 re B
+
+0.31 0.27 0.9 rg
+40 755 4 50 re f
+
+
+0.06 0.09 0.16 rg
+BT
+/F2 14 Tf
+54 788 Td
+(Mini Project Evaluation & Viva Master Guide) Tj
+ET
+
+
+0.31 0.27 0.9 rg
+BT
+/F2 8.5 Tf
+54 774 Td
+(ExpenseTracker PRO  |  Full-Stack Web Development \(FSD\)  |  100% Checklist Compliant) Tj
+ET
+
+
+0.4 0.45 0.55 rg
+BT
+/F1 8 Tf
+54 762 Td
+(Complete 9-Point Live Demonstration Script, Code Pointers, and Viva Q&A) Tj
+ET
+
+0.96 0.97 0.99 rg
+0.82 0.86 0.92 RG
+0.8 w
+40 676 515.28 68 re B
+
+0.08 0.55 0.95 rg
+40 676 3 68 re f
+
+
+0.05 0.35 0.75 rg
+BT
+/F2 8.5 Tf
+50 732 Td
+(PRE-DEMO ENVIRONMENT SETUP \(DO THIS BEFORE THE PROFESSOR ARRIVES\)) Tj
+ET
+
+
+0.15 0.2 0.3 rg
+BT
+/F4 8 Tf
+52 719 Td
+(1. Open terminal at C:\\rahul\\expense-tracker-fsd and run:  npm run dev) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F1 8 Tf
+52 707 Td
+(2. Open 3 browser tabs side-by-side:) Tj
+ET
+
+
+0.25 0.3 0.4 rg
+BT
+/F4 7.5 Tf
+52 696 Td
+(   * Tab 1 \(Main App\): http://localhost:5173  \(Sign in as Admin: admin@example.com / Admin@123\)) Tj
+ET
+
+
+0.25 0.3 0.4 rg
+BT
+/F4 7.5 Tf
+52 686 Td
+(   * Tab 2 \(Incognito / 2nd Window\): http://localhost:5173 \(Sign in as User: user@example.com / User@123\)) Tj
+ET
+
+
+0.25 0.3 0.4 rg
+BT
+/F4 7.5 Tf
+52 676 Td
+(   * Tab 3 \(Swagger API Docs\): http://localhost:5000/api-docs   |   Keep VS Code open at project root.) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+40 664 Td
+(STEP-BY-STEP LIVE DEMONSTRATION SCRIPT \(THE 9 CHECKLIST TOPICS\)) Tj
+ET
+
+0.31 0.27 0.9 rg
+40 660 515.28 1 re f
+
+0.99 0.99 1 rg
+0.86 0.9 0.94 RG
+0.8 w
+40 468 515.28 184 re B
+
+0.95 0.96 0.99 rg
+0.86 0.9 0.94 RG
+0.5 w
+40 628 515.28 24 re B
+
+0.31 0.27 0.9 rg
+48 633 16 14 re f
+
+
+1 1 1 rg
+BT
+/F2 9 Tf
+53 637 Td
+(1) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+70 637 Td
+(Frontend with Tailwind CSS) Tj
+ET
+
+0.93 0.95 1 rg
+0.78 0.82 0.98 RG
+0.5 w
+422.88 634 124.4 12 re B
+
+
+0.26 0.22 0.79 rg
+BT
+/F2 7.5 Tf
+427.88 637 Td
+(Responsive UI & Themes) Tj
+ET
+
+
+0.01 0.45 0.78 rg
+BT
+/F2 7.5 Tf
+50 618 Td
+(WHAT TO DEMONSTRATE ON SCREEN:) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 607 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 607 Td
+(Open http://localhost:5173/login. Highlight the modern fintech aesthetic, gradients, and soft cards.) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 596 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 596 Td
+(Click the Sun/Moon toggle icon in top navbar: demonstrate instant Dark & Light mode switching.) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 585 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 585 Td
+(Press F12 and toggle Mobile / Tablet view in Chrome DevTools: show responsive collapsible sidebar and grid wrap.) Tj
+ET
+
+
+0.45 0.15 0.85 rg
+BT
+/F2 7.5 Tf
+50 571 Td
+(CODE & ARCHITECTURE TO POINT TO IN VS CODE:) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 561 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 561 Td
+(client/tailwind.config.js - shows darkMode: "class", custom color palettes \(brand\), and responsive) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 551 Td
+(typography.) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 541 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 541 Td
+(client/src/components/Navbar.jsx - shows Tailwind utility classes \(backdrop-blur-md,) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 531 Td
+(dark:bg-slate-900, transition-colors\).) Tj
+ET
+
+
+0.03 0.55 0.35 rg
+BT
+/F2 7.5 Tf
+50 517 Td
+(WHAT TO SAY \(VERBATIM VIVA SCRIPT\):) Tj
+ET
+
+0.94 0.99 0.96 rg
+0.65 0.9 0.75 RG
+0.5 w
+50 476 495.28 39 re B
+
+0.06 0.65 0.4 rg
+50 476 3 39 re f
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 507 Td
+("I implemented a 100% utility-first responsive interface using Tailwind CSS without writing monolithic custom) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 496 Td
+(CSS. It features full mobile, tablet, and desktop responsiveness with an instant dark and light mode toggle) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 485 Td
+(synchronized with localStorage and HTML class attributes.") Tj
+ET
+
+0.99 0.99 1 rg
+0.86 0.9 0.94 RG
+0.8 w
+40 285 515.28 173 re B
+
+0.95 0.96 0.99 rg
+0.86 0.9 0.94 RG
+0.5 w
+40 434 515.28 24 re B
+
+0.31 0.27 0.9 rg
+48 439 16 14 re f
+
+
+1 1 1 rg
+BT
+/F2 9 Tf
+53 443 Td
+(2) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+70 443 Td
+(React & State Management) Tj
+ET
+
+0.93 0.95 1 rg
+0.78 0.82 0.98 RG
+0.5 w
+438.47999999999996 440 108.8 12 re B
+
+
+0.26 0.22 0.79 rg
+BT
+/F2 7.5 Tf
+443.47999999999996 443 Td
+(Hooks & Context API) Tj
+ET
+
+
+0.01 0.45 0.78 rg
+BT
+/F2 7.5 Tf
+50 424 Td
+(WHAT TO DEMONSTRATE ON SCREEN:) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 413 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 413 Td
+(Open Transactions page: type "Food" or "Salary" in search - show instant debounced filtering without lag.) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 402 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 402 Td
+(Show that authentication session, theme, expenses, and socket state are globally available across routes.) Tj
+ET
+
+
+0.45 0.15 0.85 rg
+BT
+/F2 7.5 Tf
+50 388 Td
+(CODE & ARCHITECTURE TO POINT TO IN VS CODE:) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 378 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 378 Td
+(client/src/context/AuthContext.jsx & ExpenseContext.jsx - React Context API providers avoiding prop) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 368 Td
+(drilling.) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 358 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 358 Td
+(client/src/hooks/useDebounce.js & useLocalStorage.js - custom reusable React hooks authored from) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 348 Td
+(scratch.) Tj
+ET
+
+
+0.03 0.55 0.35 rg
+BT
+/F2 7.5 Tf
+50 334 Td
+(WHAT TO SAY \(VERBATIM VIVA SCRIPT\):) Tj
+ET
+
+0.94 0.99 0.96 rg
+0.65 0.9 0.75 RG
+0.5 w
+50 293 495.28 39 re B
+
+0.06 0.65 0.4 rg
+50 293 3 39 re f
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 324 Td
+("Instead of relying on heavy third-party state managers like Redux, I utilized Reacts native Context API with 4) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 313 Td
+(domain-separated contexts: AuthContext, ExpenseContext, ThemeContext, and SocketContext. I also authored custom) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 302 Td
+(hooks like useDebounce for search rate-limiting and useLocalStorage for persistence.") Tj
+ET
+
+
+0.8 0.83 0.88 RG
+0.5 w
+40 38 m 555.28 38 l S
+0.4 0.45 0.55 rg
+BT
+/F1 8 Tf
+40 26 Td
+(ExpenseTracker PRO - Mini Project Evaluation Guide) Tj
+ET
+BT
+/F2 8 Tf
+495.28 26 Td
+(Page 1) Tj
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+9 0 obj
+<< /Length 6711 >>
+stream
+0.99 0.99 1 rg
+0.86 0.9 0.94 RG
+0.8 w
+40 627 515.28 173 re B
+
+0.95 0.96 0.99 rg
+0.86 0.9 0.94 RG
+0.5 w
+40 776 515.28 24 re B
+
+0.31 0.27 0.9 rg
+48 781 16 14 re f
+
+
+1 1 1 rg
+BT
+/F2 9 Tf
+53 785 Td
+(3) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+70 785 Td
+(Backend REST API & Documentation) Tj
+ET
+
+0.93 0.95 1 rg
+0.78 0.82 0.98 RG
+0.5 w
+433.28 782 114 12 re B
+
+
+0.26 0.22 0.79 rg
+BT
+/F2 7.5 Tf
+438.28 785 Td
+(Express & Swagger UI) Tj
+ET
+
+
+0.01 0.45 0.78 rg
+BT
+/F2 7.5 Tf
+50 766 Td
+(WHAT TO DEMONSTRATE ON SCREEN:) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 755 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 755 Td
+(Open Tab 3: http://localhost:5000/api-docs. Present the complete OpenAPI 3.0 Swagger interactive interface.) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 744 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 744 Td
+(Expand GET /api/expenses and click "Try it out" -> "Execute": show live 200 OK response with pagination.) Tj
+ET
+
+
+0.45 0.15 0.85 rg
+BT
+/F2 7.5 Tf
+50 730 Td
+(CODE & ARCHITECTURE TO POINT TO IN VS CODE:) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 720 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 720 Td
+(server/src/routes/expenseRoutes.js - RESTful resource naming and HTTP verbs \(GET, POST, PUT,) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 710 Td
+(DELETE\).) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 700 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 700 Td
+(server/src/controllers/expenseController.js - semantic HTTP status codes \(201 Created, 200 OK, 400,) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 690 Td
+(404\).) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 680 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 680 Td
+(server/src/config/swagger.js - OpenAPI 3.0 specifications for schemas, parameters, and endpoints.) Tj
+ET
+
+
+0.03 0.55 0.35 rg
+BT
+/F2 7.5 Tf
+50 666 Td
+(WHAT TO SAY \(VERBATIM VIVA SCRIPT\):) Tj
+ET
+
+0.94 0.99 0.96 rg
+0.65 0.9 0.75 RG
+0.5 w
+50 625 495.28 39 re B
+
+0.06 0.65 0.4 rg
+50 625 3 39 re f
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 656 Td
+("The backend is built with Node.js and Express following strict RESTful principles. It utilizes proper HTTP) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 645 Td
+(verbs, semantic status codes, modular routing, and features automated interactive Swagger documentation adhering) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 634 Td
+(to the OpenAPI 3.0 standard.") Tj
+ET
+
+0.99 0.99 1 rg
+0.86 0.9 0.94 RG
+0.8 w
+40 444 515.28 173 re B
+
+0.95 0.96 0.99 rg
+0.86 0.9 0.94 RG
+0.5 w
+40 593 515.28 24 re B
+
+0.31 0.27 0.9 rg
+48 598 16 14 re f
+
+
+1 1 1 rg
+BT
+/F2 9 Tf
+53 602 Td
+(4) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+70 602 Td
+(MongoDB & Mongoose Modeling) Tj
+ET
+
+0.93 0.95 1 rg
+0.78 0.82 0.98 RG
+0.5 w
+428.08 599 119.2 12 re B
+
+
+0.26 0.22 0.79 rg
+BT
+/F2 7.5 Tf
+433.08 602 Td
+(Aggregation Pipelines) Tj
+ET
+
+
+0.01 0.45 0.78 rg
+BT
+/F2 7.5 Tf
+50 583 Td
+(WHAT TO DEMONSTRATE ON SCREEN:) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 572 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 572 Td
+(Go to Dashboard: showcase the Category Breakdown Pie Chart and 6-Month Cash Flow Trends.) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 561 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 561 Td
+(Show that total income, spend, and monthly trends are calculated on the database engine.) Tj
+ET
+
+
+0.45 0.15 0.85 rg
+BT
+/F2 7.5 Tf
+50 547 Td
+(CODE & ARCHITECTURE TO POINT TO IN VS CODE:) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 537 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 537 Td
+(server/src/models/Expense.js - Mongoose schema, references \(ref: "User"\), and compound indexes \({) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 527 Td
+(user: 1, date: -1 }\).) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 517 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 517 Td
+(server/src/controllers/expenseController.js \(lines 280-370\) - multi-stage MongoDB aggregation) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 507 Td
+(\($match, $group, $sort\).) Tj
+ET
+
+
+0.03 0.55 0.35 rg
+BT
+/F2 7.5 Tf
+50 493 Td
+(WHAT TO SAY \(VERBATIM VIVA SCRIPT\):) Tj
+ET
+
+0.94 0.99 0.96 rg
+0.65 0.9 0.75 RG
+0.5 w
+50 452 495.28 39 re B
+
+0.06 0.65 0.4 rg
+50 452 3 39 re f
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 483 Td
+("I designed normalized Mongoose schemas with compound indexes to optimize query speed on user and date lookups.) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 472 Td
+(Financial analytics are processed directly on the database engine using MongoDB aggregation pipelines rather than) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 461 Td
+(memory-heavy JavaScript loops in application memory.") Tj
+ET
+
+0.99 0.99 1 rg
+0.86 0.9 0.94 RG
+0.8 w
+40 261 515.28 173 re B
+
+0.95 0.96 0.99 rg
+0.86 0.9 0.94 RG
+0.5 w
+40 410 515.28 24 re B
+
+0.31 0.27 0.9 rg
+48 415 16 14 re f
+
+
+1 1 1 rg
+BT
+/F2 9 Tf
+53 419 Td
+(5) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+70 419 Td
+(Data Validation & Error Handling) Tj
+ET
+
+0.93 0.95 1 rg
+0.78 0.82 0.98 RG
+0.5 w
+428.08 416 119.2 12 re B
+
+
+0.26 0.22 0.79 rg
+BT
+/F2 7.5 Tf
+433.08 419 Td
+(Security & Middleware) Tj
+ET
+
+
+0.01 0.45 0.78 rg
+BT
+/F2 7.5 Tf
+50 400 Td
+(WHAT TO DEMONSTRATE ON SCREEN:) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 389 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 389 Td
+(Click "Add Transaction", leave Title blank, and enter a negative amount -500. Submit to show instant client &) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 378 Td
+(server validation error banners and toasts.) Tj
+ET
+
+
+0.45 0.15 0.85 rg
+BT
+/F2 7.5 Tf
+50 364 Td
+(CODE & ARCHITECTURE TO POINT TO IN VS CODE:) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 354 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 354 Td
+(server/src/middleware/validationMiddleware.js - express-validator rules for strings, positive) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 344 Td
+(numbers, and ISO dates.) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 334 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 334 Td
+(server/src/middleware/errorMiddleware.js - centralized error handler catching CastErrors, duplicates) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 324 Td
+(\(11000\), and API exceptions.) Tj
+ET
+
+
+0.03 0.55 0.35 rg
+BT
+/F2 7.5 Tf
+50 310 Td
+(WHAT TO SAY \(VERBATIM VIVA SCRIPT\):) Tj
+ET
+
+0.94 0.99 0.96 rg
+0.65 0.9 0.75 RG
+0.5 w
+50 269 495.28 39 re B
+
+0.06 0.65 0.4 rg
+50 269 3 39 re f
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 300 Td
+("Validation occurs on both tiers: client-side form checking and strict server-side validation using) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 289 Td
+(express-validator. All exceptions are caught by a centralized Express error-handling middleware that returns) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 278 Td
+(standardized, consistent JSON error payloads.") Tj
+ET
+
+
+0.8 0.83 0.88 RG
+0.5 w
+40 38 m 555.28 38 l S
+0.4 0.45 0.55 rg
+BT
+/F1 8 Tf
+40 26 Td
+(ExpenseTracker PRO - Mini Project Evaluation Guide) Tj
+ET
+BT
+/F2 8 Tf
+495.28 26 Td
+(Page 2) Tj
+ET
+
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+11 0 obj
+<< /Length 7245 >>
+stream
+0.99 0.99 1 rg
+0.86 0.9 0.94 RG
+0.8 w
+40 616 515.28 184 re B
+
+0.95 0.96 0.99 rg
+0.86 0.9 0.94 RG
+0.5 w
+40 776 515.28 24 re B
+
+0.31 0.27 0.9 rg
+48 781 16 14 re f
+
+
+1 1 1 rg
+BT
+/F2 9 Tf
+53 785 Td
+(6) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+70 785 Td
+(Authentication & Authorization \(RBAC\)) Tj
+ET
+
+0.93 0.95 1 rg
+0.78 0.82 0.98 RG
+0.5 w
+438.47999999999996 782 108.8 12 re B
+
+
+0.26 0.22 0.79 rg
+BT
+/F2 7.5 Tf
+443.47999999999996 785 Td
+(JWT & Role Security) Tj
+ET
+
+
+0.01 0.45 0.78 rg
+BT
+/F2 7.5 Tf
+50 766 Td
+(WHAT TO DEMONSTRATE ON SCREEN:) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 755 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 755 Td
+(Sign in as Demo User \(user@example.com\). Manually navigate to /admin in URL bar -> show 403 Forbidden Screen.) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 744 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 744 Td
+(Logout and sign in as Admin \(admin@example.com\). The Admin Panel appears in navigation with system analytics and) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 733 Td
+(user controls.) Tj
+ET
+
+
+0.45 0.15 0.85 rg
+BT
+/F2 7.5 Tf
+50 719 Td
+(CODE & ARCHITECTURE TO POINT TO IN VS CODE:) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 709 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 709 Td
+(server/src/middleware/authMiddleware.js - stateless JWT verification extracting user ID and role.) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 699 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 699 Td
+(server/src/middleware/roleMiddleware.js - authorize\("admin"\) role-based guard on privileged API) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 689 Td
+(routes.) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 679 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 679 Td
+(server/src/models/User.js - bcrypt password hashing with 10 salt rounds prior to persistence.) Tj
+ET
+
+
+0.03 0.55 0.35 rg
+BT
+/F2 7.5 Tf
+50 665 Td
+(WHAT TO SAY \(VERBATIM VIVA SCRIPT\):) Tj
+ET
+
+0.94 0.99 0.96 rg
+0.65 0.9 0.75 RG
+0.5 w
+50 624 495.28 39 re B
+
+0.06 0.65 0.4 rg
+50 624 3 39 re f
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 655 Td
+("Authentication uses stateless JSON Web Tokens signed with HMAC-SHA256 and salted bcrypt password hashing.) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 644 Td
+(Role-Based Access Control separates regular users from administrators, enforcing permissions on both backend) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 633 Td
+(endpoints and frontend React routes with HTTP 403 authorization.") Tj
+ET
+
+0.99 0.99 1 rg
+0.86 0.9 0.94 RG
+0.8 w
+40 411 515.28 195 re B
+
+0.95 0.96 0.99 rg
+0.86 0.9 0.94 RG
+0.5 w
+40 582 515.28 24 re B
+
+0.31 0.27 0.9 rg
+48 587 16 14 re f
+
+
+1 1 1 rg
+BT
+/F2 9 Tf
+53 591 Td
+(7) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+70 591 Td
+(Real-Time Features \(Socket.IO\)) Tj
+ET
+
+0.93 0.95 1 rg
+0.78 0.82 0.98 RG
+0.5 w
+422.88 588 124.4 12 re B
+
+
+0.26 0.22 0.79 rg
+BT
+/F2 7.5 Tf
+427.88 591 Td
+(Full-Duplex WebSockets) Tj
+ET
+
+
+0.01 0.45 0.78 rg
+BT
+/F2 7.5 Tf
+50 572 Td
+(WHAT TO DEMONSTRATE ON SCREEN:) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 561 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 561 Td
+(Place Tab 1 \(Admin\) on left and Tab 2 \(Incognito / User\) on right side of screen.) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 550 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 550 Td
+(On Tab 2, click "Add Transaction" and add an expense for Rs. 1,500 on "Electronics".) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 539 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 539 Td
+(Watch Tab 1: transaction table and charts update INSTANTLY in real time without refreshing either page!) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 528 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 528 Td
+(Open Live Chat tab on both windows: type a message on Tab 1 and watch it appear instantaneously on Tab 2.) Tj
+ET
+
+
+0.45 0.15 0.85 rg
+BT
+/F2 7.5 Tf
+50 514 Td
+(CODE & ARCHITECTURE TO POINT TO IN VS CODE:) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 504 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 504 Td
+(server/src/sockets/socketHandler.js - Socket.IO server initialization, room joins, and event) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 494 Td
+(broadcasting.) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 484 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 484 Td
+(client/src/context/SocketContext.jsx - WebSocket listeners for expense:added, chat:message, and) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 474 Td
+(admin:stats_updated.) Tj
+ET
+
+
+0.03 0.55 0.35 rg
+BT
+/F2 7.5 Tf
+50 460 Td
+(WHAT TO SAY \(VERBATIM VIVA SCRIPT\):) Tj
+ET
+
+0.94 0.99 0.96 rg
+0.65 0.9 0.75 RG
+0.5 w
+50 419 495.28 39 re B
+
+0.06 0.65 0.4 rg
+50 419 3 39 re f
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 450 Td
+("I integrated Socket.IO for bi-directional event-driven communication. When any transaction or budget is) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 439 Td
+(modified, the server broadcasts WebSocket events to synchronize state across all active sessions instantly,) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 428 Td
+(eliminating the need for periodic HTTP polling.") Tj
+ET
+
+0.99 0.99 1 rg
+0.86 0.9 0.94 RG
+0.8 w
+40 239 515.28 162 re B
+
+0.95 0.96 0.99 rg
+0.86 0.9 0.94 RG
+0.5 w
+40 377 515.28 24 re B
+
+0.31 0.27 0.9 rg
+48 382 16 14 re f
+
+
+1 1 1 rg
+BT
+/F2 9 Tf
+53 386 Td
+(8) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+70 386 Td
+(Docker & Containerization) Tj
+ET
+
+0.93 0.95 1 rg
+0.78 0.82 0.98 RG
+0.5 w
+417.67999999999995 383 129.60000000000002 12 re B
+
+
+0.26 0.22 0.79 rg
+BT
+/F2 7.5 Tf
+422.67999999999995 386 Td
+(Multi-Stage Dockerfiles) Tj
+ET
+
+
+0.01 0.45 0.78 rg
+BT
+/F2 7.5 Tf
+50 367 Td
+(WHAT TO DEMONSTRATE ON SCREEN:) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 356 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 356 Td
+(Show container configuration files in root of VS Code.) Tj
+ET
+
+
+0.45 0.15 0.85 rg
+BT
+/F2 7.5 Tf
+50 342 Td
+(CODE & ARCHITECTURE TO POINT TO IN VS CODE:) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 332 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 332 Td
+(docker-compose.yml - orchestrates 3 microservices: mongo \(with named volumes\), backend, and) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 322 Td
+(frontend.) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 312 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 312 Td
+(client/Dockerfile - multi-stage build: Stage 1 builds Vite bundle on Node Alpine; Stage 2 serves it) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 302 Td
+(via Nginx.) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 292 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 292 Td
+(server/Dockerfile - lightweight production Node.js Alpine container with container healthchecks.) Tj
+ET
+
+
+0.03 0.55 0.35 rg
+BT
+/F2 7.5 Tf
+50 278 Td
+(WHAT TO SAY \(VERBATIM VIVA SCRIPT\):) Tj
+ET
+
+0.94 0.99 0.96 rg
+0.65 0.9 0.75 RG
+0.5 w
+50 237 495.28 39 re B
+
+0.06 0.65 0.4 rg
+50 237 3 39 re f
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 268 Td
+("The complete stack is containerized with Docker. I created multi-stage Dockerfiles for optimized production) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 257 Td
+(image sizes, compiling React in Stage 1 and serving it via high-performance Nginx in Stage 2. docker-compose.yml) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 246 Td
+(coordinates the frontend, backend, and MongoDB with isolated networks.") Tj
+ET
+
+
+0.8 0.83 0.88 RG
+0.5 w
+40 38 m 555.28 38 l S
+0.4 0.45 0.55 rg
+BT
+/F1 8 Tf
+40 26 Td
+(ExpenseTracker PRO - Mini Project Evaluation Guide) Tj
+ET
+BT
+/F2 8 Tf
+495.28 26 Td
+(Page 3) Tj
+ET
+
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 11 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+13 0 obj
+<< /Length 5456 >>
+stream
+0.99 0.99 1 rg
+0.86 0.9 0.94 RG
+0.8 w
+40 638 515.28 162 re B
+
+0.95 0.96 0.99 rg
+0.86 0.9 0.94 RG
+0.5 w
+40 776 515.28 24 re B
+
+0.31 0.27 0.9 rg
+48 781 16 14 re f
+
+
+1 1 1 rg
+BT
+/F2 9 Tf
+53 785 Td
+(9) Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+70 785 Td
+(DevOps, CI/CD & Automated Testing) Tj
+ET
+
+0.93 0.95 1 rg
+0.78 0.82 0.98 RG
+0.5 w
+417.67999999999995 782 129.60000000000002 12 re B
+
+
+0.26 0.22 0.79 rg
+BT
+/F2 7.5 Tf
+422.67999999999995 785 Td
+(GitHub Actions Pipeline) Tj
+ET
+
+
+0.01 0.45 0.78 rg
+BT
+/F2 7.5 Tf
+50 766 Td
+(WHAT TO DEMONSTRATE ON SCREEN:) Tj
+ET
+
+
+0.2 0.4 0.7 rg
+BT
+/F2 8.5 Tf
+52 755 Td
+(-) Tj
+ET
+
+
+0.15 0.2 0.25 rg
+BT
+/F1 8.5 Tf
+62 755 Td
+(Open terminal and run: npm test - show the automated API smoke test suite passing 10/10 tests live!) Tj
+ET
+
+
+0.45 0.15 0.85 rg
+BT
+/F2 7.5 Tf
+50 741 Td
+(CODE & ARCHITECTURE TO POINT TO IN VS CODE:) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 731 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 731 Td
+(.github/workflows/ci.yml - automated GitHub Actions pipeline linting, building, and running smoke) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 721 Td
+(tests on push.) Tj
+ET
+
+
+0.5 0.2 0.8 rg
+BT
+/F2 8 Tf
+52 711 Td
+(>) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 711 Td
+(render.yaml & client/vercel.json - Infrastructure-as-Code deployment blueprints for production cloud) Tj
+ET
+
+
+0.2 0.25 0.35 rg
+BT
+/F4 8 Tf
+62 701 Td
+(deployment.) Tj
+ET
+
+
+0.03 0.55 0.35 rg
+BT
+/F2 7.5 Tf
+50 687 Td
+(WHAT TO SAY \(VERBATIM VIVA SCRIPT\):) Tj
+ET
+
+0.94 0.99 0.96 rg
+0.65 0.9 0.75 RG
+0.5 w
+50 646 495.28 39 re B
+
+0.06 0.65 0.4 rg
+50 646 3 39 re f
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 677 Td
+("For DevOps, I implemented continuous integration using GitHub Actions in .github/workflows/ci.yml. Every code) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 666 Td
+(change triggers automated linting, compilation, and smoke test execution. The repository also includes cloud) Tj
+ET
+
+
+0.03 0.32 0.2 rg
+BT
+/F3 8.5 Tf
+58 655 Td
+(deployment blueprints for Render and Vercel.") Tj
+ET
+
+
+0.08 0.12 0.2 rg
+BT
+/F2 10 Tf
+40 628 Td
+(MOST FREQUENT VIVA QUESTIONS & MODEL TECHNICAL ANSWERS) Tj
+ET
+
+0.31 0.27 0.9 rg
+40 624 515.28 1 re f
+
+0.98 0.98 0.99 rg
+0.85 0.88 0.93 RG
+0.6 w
+40 561 515.28 55 re B
+
+0.31 0.27 0.9 rg
+40 561 3 55 re f
+
+
+0.1 0.15 0.25 rg
+BT
+/F2 8.5 Tf
+50 606 Td
+(Q: Why did you choose React Context API over Redux?) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 595 Td
+(A: "For an application of this scale, Redux introduces significant boilerplate, extra actions, and bundle overhead. Reacts) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 585 Td
+(native Context API, separated into domain providers \(Auth, Expenses, Theme, Socket\), delivers lightweight global state) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 575 Td
+(management with zero external dependencies.") Tj
+ET
+
+0.98 0.98 0.99 rg
+0.85 0.88 0.93 RG
+0.6 w
+40 500 515.28 55 re B
+
+0.31 0.27 0.9 rg
+40 500 3 55 re f
+
+
+0.1 0.15 0.25 rg
+BT
+/F2 8.5 Tf
+50 545 Td
+(Q: How does JWT authentication work end-to-end?) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 534 Td
+(A: "Upon valid login credentials, the server signs a JSON payload containing user ID and role with an HMAC secret. The) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 524 Td
+(client receives the token, stores it, and sends it in the Authorization: Bearer header on subsequent requests, verified by) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 514 Td
+(our protect auth middleware.") Tj
+ET
+
+0.98 0.98 0.99 rg
+0.85 0.88 0.93 RG
+0.6 w
+40 439 515.28 55 re B
+
+0.31 0.27 0.9 rg
+40 439 3 55 re f
+
+
+0.1 0.15 0.25 rg
+BT
+/F2 8.5 Tf
+50 484 Td
+(Q: Why use compound indexing in MongoDB?) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 473 Td
+(A: "Queries frequently filter by the logged-in user and sort by transaction date \({ user: 1, date: -1 }\). A compound index) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 463 Td
+(enables MongoDB to satisfy both filtering and sorting directly in B-tree memory without performing expensive) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 453 Td
+(collection-wide scans.") Tj
+ET
+
+0.98 0.98 0.99 rg
+0.85 0.88 0.93 RG
+0.6 w
+40 378 515.28 55 re B
+
+0.31 0.27 0.9 rg
+40 378 3 55 re f
+
+
+0.1 0.15 0.25 rg
+BT
+/F2 8.5 Tf
+50 423 Td
+(Q: Why use WebSockets instead of periodic HTTP polling?) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 412 Td
+(A: "HTTP polling creates continuous server load with repeated TCP handshakes and header payloads even when no updates) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 402 Td
+(exist. WebSockets establish a single persistent full-duplex TCP connection, pushing events \(new expenses, budget alerts,) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 392 Td
+(chat\) to clients with sub-millisecond latency.") Tj
+ET
+
+0.98 0.98 0.99 rg
+0.85 0.88 0.93 RG
+0.6 w
+40 317 515.28 55 re B
+
+0.31 0.27 0.9 rg
+40 317 3 55 re f
+
+
+0.1 0.15 0.25 rg
+BT
+/F2 8.5 Tf
+50 362 Td
+(Q: What is the key advantage of a multi-stage Docker build?) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 351 Td
+(A: "A single-stage build retains Node.js, npm caches, and build tools inside the production image, often exceeding 800MB.) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 341 Td
+(Multi-stage builds compile Vite assets in Stage 1 and copy only the compiled static output into an Alpine Nginx image in) Tj
+ET
+
+
+0.25 0.3 0.35 rg
+BT
+/F1 8 Tf
+50 331 Td
+(Stage 2, shrinking the final image to under 25MB.") Tj
+ET
+
+
+0.8 0.83 0.88 RG
+0.5 w
+40 38 m 555.28 38 l S
+0.4 0.45 0.55 rg
+BT
+/F1 8 Tf
+40 26 Td
+(ExpenseTracker PRO - Mini Project Evaluation Guide) Tj
+ET
+BT
+/F2 8 Tf
+495.28 26 Td
+(Page 4) Tj
+ET
+
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 13 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000142 00000 n 
+0000000212 00000 n 
+0000000287 00000 n 
+0000000365 00000 n 
+0000000433 00000 n 
+0000006738 00000 n 
+0000006900 00000 n 
+0000013663 00000 n 
+0000013826 00000 n 
+0000021124 00000 n 
+0000021288 00000 n 
+0000026797 00000 n 
+trailer
+<< /Size 15 /Root 1 0 R >>
+startxref
+26961
+%%EOF
