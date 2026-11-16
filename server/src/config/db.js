@@ -18,8 +18,8 @@ export const connectDB = async () => {
     } catch (directErr) {
       logger.warn(`Could not connect to external MongoDB (${directErr.message}).`);
       
-      // If development or test, start MongoMemoryServer fallback
-      if (process.env.NODE_ENV !== 'production') {
+      // If development, test, or explicitly allowed fallback, start MongoMemoryServer
+      if (process.env.NODE_ENV !== 'production' || process.env.ALLOW_MEMORY_DB === 'true' || !process.env.MONGO_URI) {
         logger.info('Initializing in-memory MongoDB fallback server...');
         const { MongoMemoryServer } = await import('mongodb-memory-server');
         mongod = await MongoMemoryServer.create();
