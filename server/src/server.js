@@ -8,6 +8,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
 import swaggerUi from 'swagger-ui-express';
+import mongoose from 'mongoose';
 
 import { connectDB } from './config/db.js';
 import { swaggerSpec } from './config/swagger.js';
@@ -124,11 +125,15 @@ const PORT = process.env.PORT || 5000;
 const startServer = async () => {
   await connectDB();
 
-  // Auto-seed if database is brand new
-  const userCount = await User.countDocuments();
-  if (userCount === 0) {
-    logger.info('No users detected in database. Running initial seed...');
-    await seedDatabase();
+  // Auto-seed if database is brand new and connected
+  if (mongoose.connection.readyState === 1) {
+    const userCount = await User.countDocuments();
+    if (userCount === 0) {
+      logger.info('No users detected in database. Running initial seed...');
+      await seedDatabase();
+    }
+  } else {
+    logger.warn('Database is not yet connected. Awaiting MONGO_URI configuration.');
   }
 
   server.listen(PORT, () => {

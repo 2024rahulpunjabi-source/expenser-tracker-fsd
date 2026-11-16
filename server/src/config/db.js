@@ -18,22 +18,31 @@ export const connectDB = async () => {
     } catch (directErr) {
       logger.warn(`Could not connect to external MongoDB (${directErr.message}).`);
       
-      // If development, test, or explicitly allowed fallback, start MongoMemoryServer
+      // If development, test, or explicitly allowed fallback, attempt MongoMemoryServer
       if (process.env.NODE_ENV !== 'production' || process.env.ALLOW_MEMORY_DB === 'true' || !process.env.MONGO_URI) {
-        logger.info('Initializing in-memory MongoDB fallback server...');
-        const { MongoMemoryServer } = await import('mongodb-memory-server');
-        mongod = await MongoMemoryServer.create();
-        const memoryUri = mongod.getUri();
-        const conn = await mongoose.connect(memoryUri);
-        logger.info(`MongoDB Connected to in-memory database: ${memoryUri}`);
-        return conn;
+        try {
+          logger.info('Initializing in-memory MongoDB fallback server...');
+          const { MongoMemoryServer } = await import('mongodb-memory-server');
+          mongod = await MongoMemoryServer.create();
+          const memoryUri = mongod.getUri();
+          const conn = await mongoose.connect(memoryUri);
+          logger.info(`MongoDB Connected to in-memory database: ${memoryUri}`);
+          return conn;
+        } catch (memErr) {
+          logger.warn(`In-memory database unavailable on this OS (${memErr.message}).`);
+          logger.warn('Please provide a valid MONGO_URI (e.g. from MongoDB Atlas) for cloud deployment.');
+          return null;
+        }
       } else {
         throw directErr;
       }
     }
   } catch (error) {
-    logger.error(`Database connection failed: ${error.message}`);
-    process.exit(1);
+    logger.error(`Database connection warning: ${error.message}`);
+    if (process.env.STRICT_DB_EXIT === 'true') {
+      process.exit(1);
+    }
+    return null;
   }
 };
 
